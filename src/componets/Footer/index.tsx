@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                         <AiFillLinkedin size="2rem" />
                     </a>
                 </Link>
-                <Link href="https://www.instagram.com/wesleyczans/" >
+                <Link href="https://www.instagram.com/wesleyczans" >
                     <a>
                         <AiFillInstagram size="2rem" />
                     </a>

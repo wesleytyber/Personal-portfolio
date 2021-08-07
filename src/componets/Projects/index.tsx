@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
                         <StackContent>
                             <StackList>
                                 <Link href="https://nextjs.org/">
-                                    <a>Next-JS</a>
+                                    <a>Next.JS</a>
                                 </Link>
                             </StackList>
                             <StackList>

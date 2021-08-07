@@ -29,7 +29,7 @@ const Technologies: React.FC = () => {
           <div>
             <SectionTech>Back-End</SectionTech>
             <SectionSkill>Experience with <br />Node.js (Basic level)</SectionSkill>
-            <SectionSkill>Framework <br />Express.JS</SectionSkill>
+            <SectionSkill>Framework <br />Express.js</SectionSkill>
             <Divider />
           </div>
         </li>

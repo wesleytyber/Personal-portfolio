@@ -8,7 +8,9 @@ const Hero: React.FC = () => {
             <SectionFlex>
                 <LeftSection>
                     <SectionTitle>Welcome to <br />My Personal Portfólio</SectionTitle>
-                    <SectionText>Lorem ipsum dolor, sit amet elit. Dicta non atque quisquam a aspernatur consequatur accusantium.</SectionText>
+                    <SectionText>
+                        Working on developing performance web applications and focusing on user experience
+                    </SectionText>
                     <Button>
                         <ButtonLearn>Learn More</ButtonLearn>
                     </Button>
