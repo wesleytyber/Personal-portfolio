@@ -23,8 +23,11 @@ const Projects: React.FC = () => {
                 <ProjectText>Projects</ProjectText>
             </ProjectGlobal>
             <SectionContent>
-                <Image src={projectPic} alt="Picture projects" />
+                <a href="https://search-products-vegan.vercel.app/?" target="_blank" rel="noreferrer">
+                    <Image src={projectPic} alt="Picture projects" />
+                </a>
                 <div>
+
                     <TitleVegan>Vegan Search</TitleVegan>
                     <Divider />
                     <Subtitle>Using React, with Next JS (FrameWork) + TypeScript, Axios with MongoDB.
