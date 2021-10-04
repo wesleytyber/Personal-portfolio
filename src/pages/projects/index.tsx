@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Header, ProjectsItem } from "../../componets";
+import { Header, ProjectsItem } from "../../components";
 import { getPrismicClient } from "../../services/prismic";
 import Prismic from "@prismicio/client";
 

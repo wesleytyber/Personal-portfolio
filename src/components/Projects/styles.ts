@@ -12,7 +12,6 @@ export const Container = styled.section`
   padding: 0 12px;
 
   > section {
-    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -99,7 +98,7 @@ export const ProjectContainer = styled.div<IProjectProps>`
     &:hover {
       > section {
         > div.text {
-          right: -12rem;
+          right: -8rem;
         }
 
         > div.overlay {
@@ -136,12 +135,13 @@ export const ProjectContainer = styled.div<IProjectProps>`
       background: url(${(props) => props.imgUrl}) no-repeat center;
       position: relative;
       background-size: cover;
-      border-radius: 0.3rem;
+      border-radius: 0.5rem;
 
       > div.overlay {
         position: absolute;
         width: 100%;
         height: 100%;
+        border-radius: 0.5rem;
         background: linear-gradient(
           225deg,
           rgb(49, 56, 110) 0%,
@@ -154,7 +154,7 @@ export const ProjectContainer = styled.div<IProjectProps>`
       > div.text {
         position: absolute;
         top: 3rem;
-        right: -10rem;
+        right: -6rem;
         transition: 0.5s;
         width: fit-content;
       }

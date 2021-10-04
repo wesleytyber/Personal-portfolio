@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
-import { Header, LoadingScreen } from "../../../componets";
-import BannerProject from "../../../componets/BannerProject";
+import { Header, LoadingScreen } from "../../../components";
+import BannerProject from "../../../components/BannerProject";
 import { getPrismicClient } from "../../../services/prismic";
 import Prismic from "@prismicio/client";
 import { useRouter } from "next/router";
 import * as S from "./styles";
+import { request } from "http";
 
 interface IProject {
   slug: string;
@@ -46,7 +47,7 @@ const project = ({ project }: IProjectProps) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prismic = getPrismicClient();
+  const prismic = getPrismicClient(request);
   const project = await prismic.query([
     Prismic.Predicates.at("document.type", "project"),
   ]);
@@ -64,8 +65,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prismic = getPrismicClient();
-  const slug = context.params;
+  const prismic = getPrismicClient(request);
+  const { slug }: any = context.params;
 
   const response = await prismic.getByUID("project", String(slug), {});
 

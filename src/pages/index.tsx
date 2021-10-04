@@ -1,12 +1,13 @@
-import Layout from "../componets/Layout";
-import Projects from "../componets/Projects";
-import Technologies from "../componets/Technologies";
-import TimeLine from "../componets/TimeLine";
-import Hero from "../componets/Hero";
+import Layout from "../components/Layout";
+import Projects from "../components/Projects";
+import Technologies from "../components/Technologies";
+import TimeLine from "../components/TimeLine";
+import Hero from "../components/Hero";
 import { GetStaticProps } from "next";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
 import Head from "next/head";
+import { request } from "http";
 
 interface IProjectProps {
   slug: string;
@@ -42,7 +43,7 @@ const Home = ({ projects }: IHomeProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
+  const prismic = getPrismicClient(request);
 
   const projectResponse = await prismic.query(
     [Prismic.Predicates.at("document.type", "project")],

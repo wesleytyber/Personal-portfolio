@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import * as S from "../../Projects/styles";
+import * as S from "../styles";
 import { AiOutlineRightCircle } from "react-icons/ai";
 
 interface IProjectProps {

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import * as S from "../../Technologies/styles";
+import * as S from "../styles";
 
 interface IKnowledgeProps {
   title: string;
