@@ -2,9 +2,11 @@ import { GetStaticProps } from "next";
 import React from "react";
 import { Header, ProjectsItem } from "../../components";
 import { getPrismicClient } from "../../services/prismic";
+import Head from "next/head";
 import Prismic from "@prismicio/client";
 
 import * as S from "./styles";
+import { request } from "http";
 
 interface IProject {
   slug: string;
@@ -22,6 +24,15 @@ interface IProjectProps {
 const projects = ({ projects }: IProjectProps) => {
   return (
     <S.ProjectsContainer>
+      <Head>
+        <title> Projects | Portfólio</title>
+        <meta name="description" content="Desenvolvedor Front-end" />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta property="og:description" content="Desenvolvedor Front-end " />
+      </Head>
       <Header />
       <main className="container">
         {projects.map((item) => (
@@ -39,7 +50,7 @@ const projects = ({ projects }: IProjectProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
+  const prismic = getPrismicClient(request);
 
   const projectResponse = await prismic.query(
     [Prismic.Predicates.at("document.type", "project")],

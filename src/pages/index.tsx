@@ -25,7 +25,7 @@ const Home = ({ projects }: IHomeProps) => {
   return (
     <Layout>
       <Head>
-        <title>portfólio</title>
+        <title> Home | Portfólio</title>
         <meta name="description" content="Desenvolvedor Front-end" />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />

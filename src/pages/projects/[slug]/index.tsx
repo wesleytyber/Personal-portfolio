@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
+import Head from "next/head";
 import { Header, LoadingScreen } from "../../../components";
 import BannerProject from "../../../components/BannerProject";
 import { getPrismicClient } from "../../../services/prismic";
