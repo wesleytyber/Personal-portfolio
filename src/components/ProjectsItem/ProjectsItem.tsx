@@ -12,7 +12,7 @@ interface IProjectsItemProps {
 const ProjectsItem = ({ title, type, imgUrl, slug }: IProjectsItemProps) => {
   return (
     <S.Container imgUrl={imgUrl}>
-      <Link href={`/projects/${slug}`}>
+      <Link href={`/projects`}>
         <a>
           <div className="overlay" />
           <section>
