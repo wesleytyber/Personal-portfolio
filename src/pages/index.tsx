@@ -24,7 +24,7 @@ const Home = ({ projects }: IHomeProps) => {
   return (
     <Layout>
       <Head>
-        <title> Home | Portfólio</title>
+        <title>Home | Portfólio</title>
         <meta name="description" content="Desenvolvedor Front-end" />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -49,12 +49,12 @@ export const getStaticProps: GetStaticProps = async () => {
     { orderings: "[document.first_publication_date desc]" }
   );
 
-  const projects = projectResponse.results.map((item) => ({
-    slug: item.uid,
-    title: item.data.title,
-    type: item.data.type,
-    descriptions: item.data.descriptions,
-    thumbnail: item.data.thumbnail.url,
+  const projects = projectResponse.results.map((project) => ({
+    slug: project.uid,
+    title: project.data.title,
+    type: project.data.type,
+    descriptions: project.data.descriptions,
+    thumbnail: project.data.thumbnail.url,
   }));
 
   return {
@@ -64,5 +64,4 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 86400,
   };
 };
-
 export default Home;

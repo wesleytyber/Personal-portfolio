@@ -35,7 +35,7 @@ const Projects = ({ projects }: IProjectsProps) => {
           ))}
         </section>
         <S.Button>
-          <Link href="projects">
+          <Link href="/projects">
             <a>All projects</a>
           </Link>
         </S.Button>
