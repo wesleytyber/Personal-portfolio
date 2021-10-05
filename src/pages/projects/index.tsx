@@ -5,7 +5,7 @@ import { getPrismicClient } from "../../services/prismic";
 import Head from "next/head";
 import Prismic from "@prismicio/client";
 
-import * as S from "./styles";
+import * as S from "../../GlobalStyles/projectsStyles";
 import { request } from "http";
 
 interface IProject {
