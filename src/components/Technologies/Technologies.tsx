@@ -39,7 +39,6 @@ const Technologies: React.FC = () => (
             React Native
           </S.SectionSkill>
           <S.SectionSkill>
-            {" "}
             Dev tools
             <br /> Expo CLI
           </S.SectionSkill>

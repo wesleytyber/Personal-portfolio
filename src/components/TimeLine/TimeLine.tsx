@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Section,
   Divider,
@@ -9,15 +9,15 @@ import {
   SectionTimeline,
   Carousel,
   CarouselText,
-} from './styles';
+} from "./styles";
 
 const Timeline = () => {
-
   return (
-    <Section id="about" >
+    <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        migrating careers, and seeking every day more knowledge and skills, to be always up to date with each new stack.
+        migrating careers, and seeking every day more knowledge and skills, to
+        be always up to date with each new stack.
       </SectionText>
       <SectionContent>
         <SectionTimeline>

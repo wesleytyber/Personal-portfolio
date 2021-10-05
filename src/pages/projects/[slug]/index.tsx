@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import { Header, LoadingScreen } from "../../../components";
@@ -7,7 +6,6 @@ import { getPrismicClient } from "../../../services/prismic";
 import Prismic from "@prismicio/client";
 import { useRouter } from "next/router";
 import * as S from "../../../GlobalStyles/slugStyles";
-import { request } from "http";
 
 interface IProject {
   slug: string;

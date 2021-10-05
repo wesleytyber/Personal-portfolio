@@ -1,13 +1,12 @@
-import Layout from '../components/Layout';
-import Projects from '../components/Projects';
-import Technologies from '../components/Technologies';
-import TimeLine from '../components/TimeLine';
-import Hero from '../components/Hero';
-import { GetStaticProps } from 'next';
-import { getPrismicClient } from '../services/prismic';
-import Prismic from '@prismicio/client';
-import Head from 'next/head';
-import { request } from 'http';
+import Layout from "../components/Layout";
+import Projects from "../components/Projects";
+import Technologies from "../components/Technologies";
+import TimeLine from "../components/TimeLine";
+import Hero from "../components/Hero";
+import { GetStaticProps } from "next";
+import { getPrismicClient } from "../services/prismic";
+import Prismic from "@prismicio/client";
+import Head from "next/head";
 
 interface IProjectProps {
   slug: string;
@@ -46,23 +45,23 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const projectResponse = await prismic.query(
-    [Prismic.Predicates.at('document.type', 'project')],
-    { orderings: '[document.first_publication_date desc]' }
+    [Prismic.Predicates.at("document.type", "project")],
+    { orderings: "[document.first_publication_date desc]" }
   );
 
-  const projects = projectResponse.results.map(item => ({
+  const projects = projectResponse.results.map((item) => ({
     slug: item.uid,
     title: item.data.title,
     type: item.data.type,
     descriptions: item.data.descriptions,
-    thumbnail: item.data.thumbnail.url
+    thumbnail: item.data.thumbnail.url,
   }));
 
   return {
     props: {
-      projects
+      projects,
     },
-    revalidate: 86400
+    revalidate: 86400,
   };
 };
 
