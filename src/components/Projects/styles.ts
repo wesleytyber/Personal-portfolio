@@ -87,6 +87,11 @@ export const Button = styled.div`
   }
 `;
 export const ProjectContainer = styled.div<IProjectProps>`
+  button {
+    border: none;
+    background: none;
+  }
+
   @media (min-width: 48rem) {
     width: 100%;
     display: flex;
