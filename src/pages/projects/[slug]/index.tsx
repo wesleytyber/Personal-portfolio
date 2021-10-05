@@ -47,7 +47,7 @@ const project = ({ project }: IProjectProps) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const prismic = getPrismicClient(request);
+  const prismic = getPrismicClient();
   const project = await prismic.query([
     Prismic.Predicates.at("document.type", "project"),
   ]);
@@ -65,7 +65,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const prismic = getPrismicClient(request);
+  const prismic = getPrismicClient();
   const { slug }: any = context.params;
 
   const response = await prismic.getByUID("project", String(slug), {});

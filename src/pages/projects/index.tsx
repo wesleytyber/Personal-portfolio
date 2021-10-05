@@ -50,7 +50,7 @@ const projects = ({ projects }: IProjectProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient(request);
+  const prismic = getPrismicClient();
 
   const projectResponse = await prismic.query(
     [Prismic.Predicates.at("document.type", "project")],
