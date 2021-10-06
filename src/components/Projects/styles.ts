@@ -105,10 +105,6 @@ export const ProjectContainer = styled.div<IProjectProps>`
         opacity: 0.4;
       }
     }
-
-    > button a {
-      color: #0070b2;
-    }
   }
 
   div.text {
