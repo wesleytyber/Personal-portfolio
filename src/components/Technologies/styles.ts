@@ -46,7 +46,7 @@ export const KnowledgeContainer = styled.div`
     width: 3rem;
     height: 3rem;
     transition: 0.3s;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     color: #3779b2;
   }
 
@@ -75,7 +75,6 @@ export const KnowledgeContainer = styled.div`
       width: 6rem;
       height: 6rem;
       transition: 0.3s;
-      opacity: 0.7;
       color: #3779b2;
     }
 

@@ -87,9 +87,96 @@ export const Button = styled.div`
   }
 `;
 export const ProjectContainer = styled.div<IProjectProps>`
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    > section {
+      > div.text {
+        right: -6rem;
+      }
+
+      > div.overlay {
+        opacity: 0.4;
+      }
+    }
+
+    > button a {
+      color: #0070b2;
+    }
+  }
+
+  div.text {
+    position: absolute;
+    top: 1rem;
+    right: -6rem;
+    transition: 0.5s;
+    width: fit-content;
+  }
+
   button {
     border: none;
     background: none;
+
+    a {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      margin-top: -50px;
+      gap: 0.5rem;
+      transition: 0.5s;
+    }
+  }
+
+  > section {
+    width: 15rem;
+    height: 10rem;
+    background: url(${(props) => props.imgUrl}) no-repeat center;
+    position: relative;
+    background-size: cover;
+    border-radius: 0.5rem;
+
+    > div.overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.5rem;
+      background: linear-gradient(
+        225deg,
+        rgb(49, 56, 110) 0%,
+        rgb(17, 23, 43) 100%
+      );
+      opacity: 0.75;
+      transition: 0.5s;
+    }
+
+    div.text {
+      position: absolute;
+      top: 1rem;
+      right: -6rem;
+      transition: 0.5s;
+      width: fit-content;
+    }
+
+    h1 {
+      color: #f5f6f7;
+      font-size: 1.3rem;
+      text-shadow: -4px 5px 22px #11172b;
+    }
+
+    h2 {
+      color: #0070b2;
+      font-size: 1rem;
+      font-weight: 300;
+      text-shadow: -4px 5px 22px #11172b;
+    }
   }
 
   @media (min-width: 48rem) {

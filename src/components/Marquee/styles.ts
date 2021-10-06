@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
-
   .marquee {
-    width: 80vw;
+    width: 100vw;
     height: 20vh;
-    background-color: #111;
+    background-image: linear-gradient(
+      to right,
+      #051937,
+      #003c5f,
+      #005f68,
+      #00804b,
+      #6f9911
+    );
+
     overflow: hidden;
     position: relative;
   }
@@ -51,13 +57,22 @@ export const Container = styled.div`
     white-space: nowrap;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 40rem) {
     .marquee {
-      width: 80vw;
+      width: 53vw;
       height: 20vh;
-      background-color: #111;
+      background-image: linear-gradient(
+        to right,
+        #051937,
+        #003c5f,
+        #005f68,
+        #00804b,
+        #6f9911
+      );
+
       overflow: hidden;
       position: relative;
+      margin-left: 12px;
     }
     .marquee:before,
     .marquee:after {
@@ -98,11 +113,6 @@ export const Container = styled.div`
       width: 20vw;
       max-height: 100%;
       white-space: nowrap;
-    }
-
-    .marquee-content li img {
-      width: 100%;
-      border: 2px solid #eee;
     }
   }
 `;
