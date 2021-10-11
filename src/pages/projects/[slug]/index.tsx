@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
+import Head from "next/head";
 import { Header, LoadingScreen } from "../../../components";
 import BannerProject from "../../../components/BannerProject";
 import { getPrismicClient } from "../../../services/prismic";
@@ -28,6 +29,16 @@ const project = ({ project }: IProjectProps) => {
 
   return (
     <S.ProjectContainer>
+      <Head>
+        <title>{project.title} | Portfólio</title>
+        <meta name="description" content={project.descriptions} />
+        <meta property="og:image" content={project.thumbnail} />
+        <meta property="og:image:secure_url" content={project.thumbnail} />
+        <meta name="twitter:image" content={project.thumbnail} />
+        <meta name="twitter:image:src" content={project.thumbnail} />
+        <meta property="og:description" content={project.descriptions} />
+      </Head>
+
       <Header />
       <BannerProject
         title={project.title}

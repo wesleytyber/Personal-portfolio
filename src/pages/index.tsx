@@ -25,12 +25,18 @@ const Home = ({ projects }: IHomeProps) => {
     <Layout>
       <Head>
         <title>Home | Portfólio</title>
-        <meta name="description" content="Desenvolvedor Front-end" />
+        <meta
+          name="description"
+          content="Desenvolvedor Front-end reactjs/nextjs and react-native"
+        />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta property="og:description" content="Desenvolvedor Front-end " />
+        <meta
+          property="og:description"
+          content="Desenvolvedor Front-end reactjs/nextjs and react-native"
+        />
       </Head>
 
       <Hero />

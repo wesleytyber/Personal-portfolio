@@ -25,12 +25,12 @@ const projects = ({ projects }: IProjectProps) => {
     <S.ProjectsContainer>
       <Head>
         <title> Projects | Portfólio</title>
-        <meta name="description" content="Desenvolvedor Front-end" />
+        <meta name="description" content="Projects completed" />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
-        <meta property="og:description" content="Desenvolvedor Front-end " />
+        <meta property="og:description" content="Projects completed" />
       </Head>
       <Header />
       <main className="container">

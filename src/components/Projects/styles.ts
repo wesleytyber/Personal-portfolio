@@ -117,7 +117,7 @@ export const ProjectContainer = styled.div<IProjectProps>`
 
   button {
     border: none;
-    background: none;
+    position: relative;
 
     a {
       color: #fff;
@@ -126,7 +126,7 @@ export const ProjectContainer = styled.div<IProjectProps>`
       display: flex;
       align-items: center;
       margin-top: -50px;
-      gap: 0.5rem;
+      gap: 0.4rem;
       transition: 0.5s;
     }
   }
