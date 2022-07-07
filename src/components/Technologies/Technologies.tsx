@@ -13,7 +13,7 @@ const Technologies: React.FC = () => (
           Experience with <br /> HTML - CSS - Javascript - Typescript
         </S.SectionSkill>
         <S.SectionSkill>
-          Frameworks <br /> Next.js - React.js - Vue.js
+          Frameworks <br /> Next.js - React.js
         </S.SectionSkill>
         <S.Divider />
       </li>
