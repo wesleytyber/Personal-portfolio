@@ -36,11 +36,11 @@ const Technologies: React.FC = () => (
           <S.SectionTech>Mobile</S.SectionTech>
           <S.SectionSkill>
             Experience with <br />
-            React Native
+            Swift || SwiftUI || UIKit
           </S.SectionSkill>
           <S.SectionSkill>
             Dev tools
-            <br /> Expo CLI
+            <br /> Xcode
           </S.SectionSkill>
           <S.Divider />
         </div>
